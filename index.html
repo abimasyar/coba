@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Story Telling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- navigasi bar -->
+    <nav class="flex justify-center items-center px-8 py-4 shadow-md fixed w-full bg-black z-10">
+      <ul class="flex space-x-10 font-medium text-center">
+        <li><a href="#awal">AWAL SEMESTA</a></li>
+        <li><a href="#data">TABEL DATA</a></li>
+        <li><a href="#form">FORM EKSPLORASI</a></li>
+      </ul>
+    </nav>
+    <!-- done -->
+     <!-- home screeen -->
+    <div class="home">
+      <img src="img/bg-header.png" alt="foto universe" class="home-image">
+      <h1 class="hAtas">WELCOME TO STORY OF OUR UNIVERSE</h1>
+    </div>
+    <!-- done -->
+     <!-- awal timeline -->
+    <section class="awal" id="awal">
+      <div class="timeline">
+        <div class="timeline-item left">
+            <img src="img/awal mula.jpg" alt="awal mula" class="zoomable">
+        </div>
+        <div class="timeline-item right">
+          <h3><u>QUOTE</u></h3>
+          <h2>1980</h2>
+          <q><em>The universe burst into something from absolutely nothing – zero, nada. And as it got bigger, it became filled with even more stuff that came from absolutely nowhere.</em></q><blockquote>- Alan Guth</blockquote>
+        </div>
+        <div class="timeline-item left">
+          <h3>SOME OTHER QUOTE</h3>
+          <h2>1927</h2>
+          <q><strong>The beginning of the world happened with the creation of a primeval atom.</strong></q><blockquote><mark>Georges Lemaître</mark></blockquote>
+        </div>
+        <div class="timeline-item right">
+            <img src="img/big-bang.jpg" alt="big-bang" class="zoomable">
+        </div>
+        <div class="timeline-item left">
+          <h3>Introduce Myself</h3>
+          <h2>2006</h2>
+          <p>Hello everyone, let me introduce myself.<br>My name is <strong>ABI MASYAR MAULANA,</strong> I am 19 years old and I live in <strong>CIREBON.</strong></br> I am a second-year student at <em>STMIK IKMI CIREBON,</em> majoring in INFORMATICS ENGINEERING</p>
+        </div>
+        <div class="timeline-item right">
+          <h3>My Hobby</h3>
+          <ol>
+            <li>gatau</li>
+            <li>apa ya</li>
+            <li>bingung</li>
+          </ol>
+        </div>
+        <div class="timeline-item left">
+          <video src="img/ledakan bigbang.mp4" class="zoomable" controls loop muted poster="img/thumbnail.jpg" width="400"></video>
+        </div>
+        <div class="timeline-item right">
+          <h3>FYI</h3>
+          <p><br>video tersebut adalah sebuah ilustrasi mengenai ledakan bigbang</br> tapi dengan sedikit bumbu jj😋🤙</p>
+        </div>
+        <div class="timeline-item left">
+          <h3>My Fav Song</h3>
+          <p><br>dibawah ini merupakan salah satu lagu fav saya</br>ada yg bisa tebak ga coba</p>
+        </div>
+        <div class="timeline-item right">
+          <audio src="img/ini dia.mp3" controls></audio>
+        </div>
+      </div>
+    </section>
+    <!-- done -->
+<!-- tabel -->
+<section class="model-table" id="data">
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">table</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>kamu</td>
+        <td>aku</td>
+      </tr>
+      <tr>
+        <td>you</td>
+        <td>me</td>
+      </tr>
+      <tr>
+        <td>bingung</td>
+        <td>mau</td>
+      </tr>
+      <tr>
+        <td>nulis</td>
+        <td>apalagi</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+<!-- SECTION: FORM -->
+<section class="form" id="form">
+  <h2>FORM EKSPLORASI</h2>
+  <form action="#" method="post">
+    <label for="nama">Nama Lengkap</label>
+    <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+
+    <label for="asal">Asal Kota</label>
+    <input type="text" id="asal" name="asal" placeholder="Masukkan asal kota" required>
+
+    <label for="umur">Umur</label>
+    <input type="number" id="umur" name="umur" placeholder="Masukkan umur" required>
+
+    <label for="hobi">Hobi</label>
+    <select id="hobi" name="hobi">
+      <option value="">-- Pilih Hobi --</option>
+      <option value="musik">Musik</option>
+      <option value="olahraga">Olahraga</option>
+      <option value="ngoding">Ngoding</option>
+      <option value="gaming">Gaming</option>
+    </select>
+
+    <label for="pesan">Pesan</label>
+    <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis sesuatu..."></textarea>
+
+    <button type="submit">Kirim</button>
+  </form>
+</section>
+
+    <script src="jquery-3.7.1.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

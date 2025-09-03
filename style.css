@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1c1c1c;
+  font-family: "Epunda Slab", serif;
+  font-optical-sizing: auto;
+  color: rgb(255, 255, 255);
+}
+
+.hAtas {
+  opacity: 0;
+  transform: translate(0, -750px);
+  transition: 1s;
+}
+
+.hAtas.hMuncul {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* biar full layar */
+  overflow: hidden;
+  display: flex; /* aktifin flexbox */
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.home-image {
+  position: absolute; /* biar gambar jadi background */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* taruh gambar di belakang */
+  background-attachment: fixed;
+}
+
+.timeline {
+  position: relative;
+  margin: 100px auto;
+  padding: 20px 0;
+  width: 80%;
+}
+
+/* Garis di tengah */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: lightskyblue;
+}
+
+.timeline-item {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  background: #000000;
+  border-radius: 10px;
+  margin-bottom: 50px;
+
+  /* animasi awal (hidden) */
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.timeline-item.left {
+  left: 0;
+  transform: translateX(-80px);
+}
+
+.timeline-item.right {
+  left: 55%;
+  transform: translateX(80px);
+}
+
+.timeline-item.muncul {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-item h3 {
+  font-style: italic;
+  color: lightskyblue;
+  margin-bottom: 5px;
+}
+
+.timeline-item h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.timeline-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.timeline-item img:hover {
+  filter: grayscale(0%);
+  
+}
+
+.timeline-item ol {
+  margin-left: 20px;
+  list-style-type: decimal; /* biar angka muncul */
+  color: white;
+}
+.timeline-item li {
+  margin-bottom: 5px;
+}
+
+.zoomable {
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.zoomable.active {
+  transform: scale(2); /* zoom 2x */
+  z-index: 999; /* biar nongol di atas */
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Titik di garis tengah */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: lightskyblue;
+  border: 3px solid #ffffff;
+}
+
+.timeline-item.left::before {
+  right: -35px;
+}
+
+.timeline-item.right::before {
+  left: -35px;
+}
+
+/* ===== MODEL TABEL ===== */
+section.model-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #757575; /* abu-abu terang */
+  padding: 2rem;
+}
+
+section.model-table table {
+  border-collapse: collapse;
+  min-width: 250px;
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  font-family: monospace;
+}
+
+section.model-table thead th {
+  background: #333;
+  color: white;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-bottom: 1px solid #555;
+}
+
+section.model-table tbody td {
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  color: #333;
+}
+
+/* ====== FORM PENDAFTARAN ====== */
+section.form {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  color: #111;
+}
+
+section.form h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+section.form form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f9fafb; /* bg-gray-100 */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+section.form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+section.form input,
+section.form select,
+section.form textarea {
+  width: 100%;
+  border: 1px solid #9ca3af; /* border-gray-400 */
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #111;
+  background-color: #fff;
+}
+
+section.form button {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+section.form button:hover {
+  background-color: #1f2937; /* hover: bg-gray-800 */
+}
