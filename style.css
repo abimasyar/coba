@@ -165,6 +165,7 @@ section.model-table {
   align-items: center;
   background: #757575; /* abu-abu terang */
   padding: 2rem;
+  height: 100vh
 }
 
 section.model-table table {
@@ -197,6 +198,7 @@ section.form {
   background-color: #fff;
   padding: 4rem 2rem;
   color: #111;
+  height: 100vh;
 }
 
 section.form h2 {
